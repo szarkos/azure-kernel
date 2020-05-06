@@ -13,7 +13,7 @@
 
 Name:		kernel-azure-tools
 Summary:	Microsoft Hyper-v utilities
-Version:	4.2.6
+Version:	4.3.4
 Release:	1%{?dist}
 
 Group:		System/Kernel
@@ -50,7 +50,7 @@ cp tools/hv_fcopy_daemon.c %_sourcedir/
 set -- *
 mkdir source
 mv "$@" source/
-sed -i 's/#define HV_DRV_VERSION\t".*"/#define HV_DRV_VERSION\t"4.2.6"/g' source/include/linux/hv_compat.h
+sed -i 's/#define HV_DRV_VERSION\t".*"/#define HV_DRV_VERSION\t"4.3.4"/g' source/include/linux/hv_compat.h
 
 mkdir obj
 
@@ -137,7 +137,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri May 01 2020 - Stephen A. Zarkos <steve@sentry.net>
+- Update to LIS 4.3.4
+
 * Wed Aug 8 2018 - Stephen A. Zarkos <stephen.zarkos@microsoft.com>
 - Initial release for kernel-azure package from the CentOS Virt SIG
-
-

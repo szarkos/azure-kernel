@@ -1,6 +1,6 @@
 Name:		centos-release-azure
 Summary:	Yum configuration for CentOS Virt SIG Azure repo
-Version:        1.0
+Version:        1.1
 Release:        2.el6.centos
 
 Group:		System Environment/Base
@@ -33,6 +33,12 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Azure.repo
 
 %changelog
+* Wed May 06 2020 Stephen A. Zarkos <steve@sentry.net> - 1.1-2.centos
+- Add "keepcache=0" to azure-kernel repo config
+
+* Fri May 01 2020 Stephen A. Zarkos <steve@sentry.net> - 1.1-1.centos
+- Update repository name from 'azure' to 'azure-kernel' (CentOS bug #17302)
+
 * Thu Jul 26 2018 Stephen A. Zarkos <stephen.zarkos@microsoft.com> - 1.0-2.centos
 - Minor updates to .repo configuration
 
