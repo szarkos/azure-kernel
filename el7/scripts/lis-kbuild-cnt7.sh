@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lis="4.3.3"
+lis="4.3.5"
 krepo="7.7.1908/updates"
 kversion=$( curl -s "http://vault.centos.org/${krepo}/Source/SPackages/" | \
 	    grep "kernel-3.10.0-1062" | \
@@ -61,7 +61,6 @@ cp patches/LIS-${lis}_linux-${kbasever}.patch ${topdir}/rpmbuild/SOURCES/
 
 
 # Copy Additional Patches
-cp patches/LIS-hvcompat-refcount.patch ${topdir}/rpmbuild/SOURCES/
 
 
 # Patch spec file
@@ -80,7 +79,6 @@ echo "Patching kernel build config..."
 cd ${topdir}/rpmbuild/SOURCES
 patch -p0 < ${topdir}/patches/kernel-3.10.0-x86_64.config.patch
 patch -p0 < ${topdir}/patches/kernel-3.10.0-x86_64-debug.config.patch
-
 
 # Build the kernel
 echo -e "Begin building kernel...\n\n"

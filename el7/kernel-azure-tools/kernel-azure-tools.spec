@@ -13,7 +13,7 @@
 
 Name:		kernel-azure-tools
 Summary:	Microsoft Hyper-v utilities
-Version:	4.3.1
+Version:	4.3.4
 Release:	1%{?dist}
 
 Group:		System/Kernel
@@ -25,7 +25,7 @@ URL:		https://github.com/LIS/lis-next
 Source0:	kernel-azure-tools-rh7.tar.gz
 
 Provides:	kernel-azure-tools
-Requires:	kernel-azure >= 3.10.0-957
+Requires:	kernel-azure >= 3.10.0-1062
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildArch:	x86_64
@@ -53,7 +53,7 @@ cp tools/hv_fcopy_daemon.c %_sourcedir/
 set -- *
 mkdir source
 mv "$@" source/
-#sed -i 's/#define HV_DRV_VERSION\t".*"/#define HV_DRV_VERSION\t"4.3.1"/g' source/include/linux/hv_compat.h
+#sed -i 's/#define HV_DRV_VERSION\t".*"/#define HV_DRV_VERSION\t"4.3.4"/g' source/include/linux/hv_compat.h
 
 mkdir obj
 
@@ -141,6 +141,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri May 1 2020 - Stephen A. Zarkos <steve@sentry.net>
+- Update to LIS 4.3.4
+
 * Wed May 1 2019 - Stephen A. Zarkos <stephen.zarkos@microsoft.com>
 - Update to LIS 4.3.1
 
