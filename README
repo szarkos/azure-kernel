@@ -1,0 +1,18 @@
+These are scripts used to build the 'kernel-azure' and related
+packages that are published as part of the CentOS Virtualization
+SIG: https://wiki.centos.org/SpecialInterestGroup/Virtualization
+
+Azure-Kernel repositories:
+http://mirror.centos.org/centos/6/virt/x86_64/azure-kernel/
+http://mirror.centos.org/centos/7/virt/x86_64/azure-kernel/
+
+Package builds can typically be found here:
+https://cbs.centos.org/koji/builds?userID=szarkos&order=-build_id
+
+Questions can be directed to the CentOS-Virt mailing list:
+https://lists.centos.org/mailman/listinfo/centos-virt
+
+
+The previous location of this repo was here:
+https://github.com/openlogic/AzureBuildCentOS/tree/master/kernel-azure
+
